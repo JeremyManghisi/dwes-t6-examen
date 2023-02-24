@@ -20,7 +20,7 @@ if ($_POST) {
             $nombre = $usuario->getNombre();
             echo <<<END
             <ul>
-            <li>  $nombre </li>
+            <li> <img class="rounded float-start me-2" width="32px" src="{$sesion->getAvatar()}"> $nombre </li>
             </ul>
             END;
         }
