@@ -1,7 +1,8 @@
 <?php
 $usuarios = $datosParaVista['datos'];
-
+if ($_POST) {
 $texto = $_POST['nombre'];
+}
 ?>
 
 <form action="index.php?controlador=busqueda&accion=usuarios" method="post">
@@ -15,6 +16,7 @@ $texto = $_POST['nombre'];
 </form>
 
 <?php
+    if ($_POST) {
     if (count($usuarios) == 0) {
         echo "No existen usuarios con el patrón <i>$texto</i>";
     } else {
@@ -26,5 +28,6 @@ $texto = $_POST['nombre'];
             <li>  $nombre </li>
             </ul>
             END;
+        }
         }
     }
