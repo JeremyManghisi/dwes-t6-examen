@@ -18,7 +18,7 @@ $texto = $_POST['nombre'];
 <?php
     if ($_POST) {
     if (count($usuarios) == 0) {
-        echo "No existen usuarios con el patrón <i>$texto</i>";
+        echo "No existen usuarios con el patrón <i>$texto</i>.";
     } else {
         echo "<h2> Usuarios encontrados con el patrón <i>$texto:</i> </h2>";
         foreach ($usuarios as $usuario) {
